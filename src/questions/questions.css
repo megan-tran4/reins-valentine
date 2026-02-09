@@ -129,3 +129,20 @@ h1 {
         transform: scale(0.35);
     }
 }
+
+.white-men {
+    height: 50vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-between;
+    
+}
+
+.white-men img {
+    height: 100%;
+    width: auto;
+}
