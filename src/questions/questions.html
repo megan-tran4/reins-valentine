@@ -1,0 +1,44 @@
+<div class="main">
+    <h1 [hidden]="!card_picked"style="text-align: center;"> I am glad to be your friend &lt;3</h1>
+
+<div class="body">
+    
+        <div [hidden]="!card_picked"> 
+            <div>
+                <img class="scale" src="assets/Cups02.jpg">
+            </div>    
+            
+    </div>
+    <div class="questionarrie">
+        <div class="question1" *ngIf = "on_question === 0 && !questions_done">
+            <h1> Is your name Rein Phone</h1>
+            <div class="buttons">
+                <button class="yes-button" (click)="question_change()"> Yes </button>
+                <button class="no-button" (click)="no()"> No </button>
+            </div>
+        </div>
+        <div class="question2" [hidden] = "on_question != 1">
+            <h1> Are you obsessed with white twinks</h1>
+            <div class="buttons">
+                <button class="yes-button" (click)="questions_finished()"> Yes </button>
+                <button class="no-button" (click)="no()"> No </button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="tarot" *ngIf="questions_done && !card_picked">
+        <h1> Pick a card</h1>
+        <div class="deck">
+            <div class="card" style="background-color: #edf2fb;"></div>
+            <div class="card" style="background-color: #bae0f3;"></div>
+            <div class="card" style="background-color: #87ceeb;"></div>
+            <div class="card" style="background-color: #6cbde9;"></div>
+            <div class="card" style="background-color: #50ABE7;"></div>
+        </div>
+        <div class="buttons">
+            <button class="yes-button" (click)="shuffleAllCards()">Shuffle Deck</button>
+            <button class="no-button" (click)="pickCard()"> Choose Card</button>
+        </div>
+    </div>
+</div>
+</div>
